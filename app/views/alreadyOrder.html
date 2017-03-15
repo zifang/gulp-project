@@ -1,0 +1,33 @@
+<div class="container container-owner">
+	<input type="hidden" id="hid-token" value="1d7afc7b-bf0f-4c6d-ac78-8fd1fe41713764540001">
+	<input type="hidden" id="hid-type" value="">
+	<header class="weui-header">
+		<div class="weui-header-left" style="">
+			<a href="javascript:history.back(-1)"><i class="icon-x icon-x10"></i></a>
+		</div>
+		<h1 class="weui-header-title">订单列表</h1>
+		<div class="weui-header-right right-more">
+			<a href="/cindy/sendDinner/sendDinnerInfo.htm"><i class="icon-22"></i></a>
+		</div>
+    </header>
+	<section class="content">
+		<!-- <div class="owner-tab"> -->
+			<ul class="myorder-ul" id="myDinnerList">
+				<li ng-repeat="item in lists"><a href="javascript:;" style="color:inherit;">
+					<div class="title"><span class="left">{{item.addtime}}</span><span class="right colorBrown">{{item.orderType | switchStatus}}</span></div>
+					<div class="restaurant-info">
+					<div class="restaurant-img">
+						<img ng-src="{{item.storeLogoUrl}}">
+					</div>
+					<div class="restaurant-con">
+						<h3>{{item.storeName}}</h3>
+						<p class="clearfix col999"><span class="left">共点了{{item.totalWeight}}份</span><span class="right">共计<b>¥{{item.totelprice}}</b></span></p>
+					</div>
+				</div></a>
+				</li>
+			</ul>
+        <!-- </div> -->
+	</section>
+</div>
+<div class="weui_mask js-cancle" style="display:none;"></div>
+

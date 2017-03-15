@@ -1,0 +1,37 @@
+<div class="page home-page" ng-controller="homeCtrl">
+	<div class="head" style="background:url('{{storeImage}}') no-repeat center center;background-size:cover">
+		<div class="head-masking"></div>
+		<div class="store-info">
+			<h1 class="store-name">{{storeName}}</h1>
+			<p class="store-address">{{address}}</p>
+		</div>
+		<div class="avatar" style="background:url('{{image}}') no-repeat center center;background-size:cover;">
+		</div>
+	</div>
+	<div class="notice-box">
+		<span></span>
+		<div class="notice-list" id="notice-list">
+			<table>
+				<tr>
+					<td id="box1" valign="top" align="center">
+						<table>
+							<tr id="re_examlist">
+								<td ng-repeat="notice in notices"><div class="notice">{{notice.name}}</div></td>
+							</tr>
+						</table>
+					</td>
+					<td id="box2" valign="top">
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<div class="btn-link-box plr12">
+		<a ui-sref="orderDishes"><span class="home-btn btn-dc"></span><p>堂食点餐</p></a>
+		<a ui-sref="wxPay"><span class="home-btn btn-zf"></span><p>微信支付</p></a>
+	</div>
+	<div class="btn-link-box plr12">
+		<a ui-sref="alreadyOrder"><span class="home-btn btn-dd"></span><p>已点订单</p></a>
+		<a ui-sref="evaluate"><span class="home-btn btn-ds"></span><p>评价打赏</p></a>
+	</div>
+</div>

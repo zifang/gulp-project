@@ -1,0 +1,96 @@
+	<div class="loadimg" id="loadimg" style="display: none;"></div>
+	<div class="weui-header weui-header2"> 
+		<div class="weui-header-left"><a href="javascript:history.back()"><i class="icon-x icon-x10"></i></a></div>
+		<h1 class="weui-header-title">订单详情</h1>
+	</div>	
+	<input type="hidden" name="token" id="token" value="1d7afc7b-bf0f-4c6d-ac78-8fd1fe41713764540001">
+	<input type="hidden" name="orderId" id="orderId" value="">
+	<div class="page page2 scrollpage">
+		<div class="scroll">
+			<div class="order-post-state">
+				<div class="order order1">
+					<i class="order-i order-i1"></i>
+					<dl class="orderdl">
+						<dt id="order-status">订单已支付</dt>
+					</dl>
+				</div>
+			</div>
+			<div class="plr12">
+				<div class="order-con">
+					<div class="order-state">
+						<p class="clearfix"><span class="head"><img src="http://wx.qlogo.cn/mmopen/lyDjjnjs7yWRnbqRYDqIH01r62ibZwXtzzdj2U0wa2SiapGWXGUaqicAibewicb2XaBHfURt6vDhzpgC9hCOw7AWExxt2FbchVjjs/0" width="20" height="20" class="header-img"></span><span class="font16">精灵</span><span class="num">11</span></p>
+						<div class="table-number">
+							<span class="line-left"></span><span class="text">就餐号</span><span class="line-right"></span>
+						</div>
+						<div class="dish-number" id="dish-number">Y004</div>
+						<div class="order-state-bg"></div>
+					</div>
+					<div class="order-list">
+						<div class="title"><h3 class="left font16">订单菜品</h3></div>
+						<table class="tb menus-table"><tbody><tr style=""><td class="td1">野菜汤</td><td class="td2">x1</td><td class="td3">¥0.01</td></tr></tbody></table>
+						<div class="addition-box">
+							<div class="addition-title"><b>附加项</b></div>
+							<table class="tb" id="table-addition"><tbody><tr><td class="td1">炭火费</td><td class="td2">x1</td><td class="td3">¥<span>2</span></td></tr></tbody></table>
+						</div>
+						<div class="favorable-detail" style="display: none;">
+							<input type="hidden" id="favor-type">
+							<div class="clearfix discount-box">
+								<span class="right" style="font-size:15px;">- ¥<span id="minusPrice">0</span></span>
+								<span id="manjian" class="favorable-name color999"></span>
+							</div>
+							<div class="favorable-title">
+								<span class="right">实付 <span class="colorg" style="font-size:18px;">¥<span id="finalMoney">0</span></span></span>合计 ¥<span id="totalMoney" style="font-size:16px;">2.01</span>
+								<span class="already-discount">已优惠¥<span id="discountMoney">0</span></span>
+							</div>
+						</div>
+						<div id="addremark">
+							<div class="title"><h3 class="left font16">订单备注</h3></div>
+							<div id="pointresult">
+								<div id="pointresult-c"><span><i>•</i>少放酱油</span><span><i>•</i>不要洋葱</span></div>
+								<div id="pointresult-input"></div>
+							</div>
+						</div>
+						<table class="tb order-result" style="display:none;">
+							<tbody><tr>
+								<td class="td1"><b class="col333 font16">总计：</b>1份菜</td>
+								<td class="td2"></td>
+								<td class="td3 colorg">¥2.01</td>
+							</tr>
+						</tbody></table>
+					</div>
+				</div>	
+		    </div>
+			<div class="order-info-box">
+				<h3>订单信息</h3>
+				<div class="info-text">
+					<span class="text">订单编号：</span><span class="info orderNo">17031400000035</span>
+				</div>
+				<div class="info-text">
+					<span class="text">下单时间：</span><span class="info addtime">2017-03-14 16:47:35</span>
+				</div>
+				<div class="info-text">
+					<span class="text">支付方式：</span><span class="info payType">微信支付</span>
+				</div>
+				<div class="info-text" style="display: none;">
+					<span class="text">发票类型：</span><span class="info invoiceType"></span>
+				</div>
+				<div class="info-text" style="display: none;">
+					<span class="text">发票抬头：</span><span class="info invoiceHeader"></span>
+				</div>
+				<div class="info-text" style="display: none;">
+					<span class="text">发票邮箱：</span><span class="info email"></span>
+				</div>
+			</div>
+			<div class="ad-box" id="ad-box">
+				<a><img src=""></a>
+			</div>
+			<img src="/betty/statics/images/wx.jpg" width="100%">
+		</div>
+	</div>
+	<div class="no-open-wx" id="no-open-wx" style="display:none;">
+		<img src="/betty/statics/images/noOpenWX.png" alt="没有开通微信支付的文字提示">
+	</div>
+	<div id="card-bottom">
+		<div class="plr12"><a href="/betty/orderEvaluate/evaluatePage.htm?orderId=13690&amp;orderNo=17031400000035&amp;storeId=150&amp;username=精灵&amp;headUrl=http://wx.qlogo.cn/mmopen/lyDjjnjs7yWRnbqRYDqIH01r62ibZwXtzzdj2U0wa2SiapGWXGUaqicAibewicb2XaBHfURt6vDhzpgC9hCOw7AWExxt2FbchVjjs/0&amp;token=1d7afc7b-bf0f-4c6d-ac78-8fd1fe41713764540001&amp;commentType=0" class="weui_btn bg-org per-btn-100">菜品评价</a></div>
+	</div>
+	<div class="global-mask layout"></div>

@@ -1,0 +1,149 @@
+<div class="loadimg" id="loadimg" style="display: none;"></div>
+	<div class="weui-header">
+		<div class="weui-header-left"><a href="javascript:;" id="mycenter"><span class="dc-icon dc-icon-mycenter"></span></a></div>
+		<div class="weui-header-right">
+			<a class="ordernames" id="alreadyOrders" href="javascript:;" style="font-size:14px;"><i class="icon-x icon-x6" style="margin-top:-3px;margin-right:2px;"></i> 已点订单</a>
+		</div> 
+    </div>
+	<ul class="tab-bar">
+		<li ng-class="{'tab-bar-on':isList}" ng-click="isList=true"><span>菜单列表</span></li>
+		<li ng-click="isList=false" ng-class="{'tab-bar-on':!isList}"><span>餐厅详情</span></li>
+	</ul>
+    <div class="tab-con clearfix" ng-show="isList">
+		<div id="shopmenu-category" class="scrollpage scroll-active">
+			<ul class="list-group list-group1">
+				<li data-index="3" sortid="120" class="list-item" data-node="categoryItem">
+					<a href="#food3">测试分类44</a><em class="cart-count">0</em>
+				</li>
+			</ul>
+		</div>
+		<!--菜单列表开始-->
+		<div id="shopmenu-list" class="shopmenu-list">
+			<div id="scroller">
+			<ul class="listgroup" data-id="1" sortid="" ng-repeat="item in data.menusItem">
+				<li class="list-title">热卖</li>
+				<li class="list-item item-img " data-item="{{item.menusItemId}}">
+					<div class="wrap">
+						<div class="list-img">
+							<div class="lazy-div"><img src="/betty/statics/images/nodish.png" width="50" height="50"></div>
+						</div>
+						<div class="list-content">
+							<h4 class="title">{{item.dishesName}}</h4>
+							<p class="description">月售<strong>{{item.soldNumber}}</strong>{{item.units}}<span class="hide priceall"></span></p>
+							<p class="price-p"><b>￥</b><strong class="price">{{item.price}}</strong><span class="units"><i>/</i>{{item.units}}</span></p>
+							<p class="menuDishesSortId" sortid="120"></p>
+						</div>
+					</div>
+					<div class="item-add">
+						<span class="btn  -minus"><i class="icon-minus"><i class="icon-x icon-x2"></i></i></span>
+						<span class="item-count">0</span><span class="btn -plus ball"><i class="icon-plus"><i class="icon-x icon-x1"></i></i></span>
+					</div>
+				</li>
+			</ul>
+			
+			<div class="list-title-dis">图片仅供参考 菜品请以实物为准</div></div>
+		</div>
+		<!--菜单列表结束-->
+		<div id="shopmenu-cart-list" class="shopmenu-cart-list">
+			<div class="shopmenu-cart-title"><span class="left">桌号11</span><i class="right"><i class="icon-x icon-x9"></i>清空购物车</i></div>
+			<div id="cart-list-bottom" class="cart-list-bottom">
+				<div style="position: absolute; top: 0px; width: 100%; z-index: 2; transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1); transition-duration: 0ms; transform: translate(0px, 0px) translateZ(0px);">
+					<ul class="list-group"></ul>
+				</div>
+			</div>
+		</div>	
+		<div id="shopmenu-cart-bar" class="shopmenu-cart-bar">
+			<div class="row-num"><i class="icon-cart icon-cart2 icon-x icon-x4"></i><em class="cart-count num">0</em></div>
+			<div class="row-cart">
+				<div class="price-info"><!-- 合计&nbsp;¥<span class="zj ml10">0</span>&nbsp;元 -->
+					<div class="cart-price zongjia"><span>购物车空空如也</span></div>
+					<div class="cart-premium" style="display: none;"></div>
+				</div>
+			</div>
+			<a class="row-status" data-node="cartStatus" data-url="" data-dishc="2" href="javascript:void(0)">下一步</a>
+		</div>
+	</div>
+	<div class="tab-con" ng-show="!isList">
+		<div class="index-tab-3 scrollpage2">
+			<ul class="scroll">
+				<li class="weui_panel weui_panel_access">
+					<div class="weui_panel_bd">
+						<div href="javascript:void(0);" class="weui_media_box weui_media_appmsg">
+							<div class="weui_media_hd">
+								<img class="weui_media_appmsg_thumb" id="storeImgUrl" alt="" ng-src="{{info.logoUrl}}">
+							</div>
+							<div class="weui_media_bd">
+								<h4 class="weui_media_title"><span class="restaurant-dish" id="span_storeName">{{info.storeName}}</span></h4>
+							</div>
+						</div>
+					</div>  
+				</li> 
+				<li class="weui_cells">
+	                <div class="weui_cell">
+						<div class="weui_cell_hd"><i class="icon-x icon-x14"></i></div>
+						<div class="weui_cell_bd weui_cell_primary">
+							<p id="span_storeAddress">{{info.storeAddress}}</p>
+						</div>
+					</div>
+					<div class="weui_cell">
+						<div class="weui_cell_hd"><i class="icon-x icon-x15"></i></div>
+						<div class="weui_cell_bd weui_cell_primary">
+							<p style="color:#333" id="span_phone">{{info.phone}}</p>
+						</div>
+					</div>
+				</li>	
+				<li class="weui_cells">
+	                <div class="weui_cell">
+						<div class="weui_cell_bd weui_cell_primary">
+							<p>营业时间：{{info.startTime}} -- {{info.stopTime}}</p>
+						</div>
+						<div class="weui_cell_ft" id="span_startime_and_stoptime"></div>
+					</div>
+					<div class="weui_media_box weui_media_text" style="padding-left:12px;">
+	                    <h4 class="weui_media_title" style="font-size:15px;">门店介绍：</h4>
+	                    <p class="weui_media_desc50" id="span_storeDesc">
+						</p>
+	                </div>
+				</li>	
+			</ul>
+		</div>	
+	</div>
+	<!--清除订单提醒 -->
+	<div class="toast parentlayer hide clearFood">
+		<div class="weui_dialog weui_dialog_visible">
+			<div class="weui_dialog_hd">
+				<strong class="weui_dialog_title">确认清空购物车吗?</strong>
+			</div>
+			<div class="weui_dialog_b">
+				<a href="javascript:;" class="weui_btn_dialog default left">取消</a>
+				<a href="javascript:void(0)" class="weui_btn_dialog primary right">确定</a>
+			</div>
+		</div>
+	</div>
+	<!-- 点击菜单查看大图 -->
+	<div class="dishshow parentlayer" id="layerFood" data-item="" style="display:none">
+		<h3 id="foodName">佛家养生菜</h3>
+		<div class="foodpicture"><img style="display:none;" id="imgUrl" src=""></div>
+		<div class="foodinfo">
+			<div class="label-box clearfix">
+			</div>
+			<p class="font12 col999" id="sellNum" style="display:none;"></p>
+			<div class="foodinfo-b clearfix">
+				<span class="colorg price">￥<span id="foodPrice">28</span></span>
+				<span class="item-add">                
+					<span class="btn  -minus" id="layerminus" style="display:none;"><i class="icon-x icon-x2"></i></span>             
+					<span class="item-count" id="layercount" style="display:none;">3</span>                
+					<span class="btn -plus" id="layerplus"><i class="icon-x icon-x1"></i></span>      
+				</span>
+			</div>
+		</div>
+		<div class="cancle-btn js-cancle"></div>
+	</div>
+<!-- 产看订单浮层 -->
+<!--遮罩层-->
+<div class="global-mask layout"></div>
+<div class="global-mask3 layout"></div>
+<div class="global-mask2 layout"></div>
+<div class="current-mask layout"></div>
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+

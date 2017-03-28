@@ -2,7 +2,7 @@
 	<div class="weui-header">
 		<div class="weui-header-left"><a href="javascript:;" id="mycenter"><span class="dc-icon dc-icon-mycenter"></span></a></div>
 		<div class="weui-header-right">
-			<a class="ordernames" id="alreadyOrders" href="javascript:;" style="font-size:14px;"><i class="icon-x icon-x6" style="margin-top:-3px;margin-right:2px;"></i> 已点订单</a>
+			<a class="ordernames" id="alreadyOrders" ui-sref="alreadyOrder" style="font-size:14px;"><i class="icon-x icon-x6" style="margin-top:-3px;margin-right:2px;"></i> 已点订单</a>
 		</div> 
     </div>
 	<ul class="tab-bar">
@@ -20,12 +20,12 @@
 		<!--菜单列表开始-->
 		<div id="shopmenu-list" class="shopmenu-list">
 			<div id="scroller">
-			<ul class="listgroup" data-id="1" sortid="" ng-repeat="item in data.menusItem">
+			<ul class="listgroup" data-id="1" sortid="" >
 				<li class="list-title">热卖</li>
-				<li class="list-item item-img " data-item="{{item.menusItemId}}">
+				<li class="list-item item-img " ng-repeat="item in data.menusItem" data-item="{{item.menusItemId}}">
 					<div class="wrap">
 						<div class="list-img">
-							<div class="lazy-div"><img src="/betty/statics/images/nodish.png" width="50" height="50"></div>
+							<div class="lazy-div"><img src="/images/nodish.png" width="50" height="50"></div>
 						</div>
 						<div class="list-content">
 							<h4 class="title">{{item.dishesName}}</h4>

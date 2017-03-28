@@ -13,14 +13,9 @@ var eparty = angular
     'ui.router'
   ]);
 eparty.config(function ($stateProvider,$urlRouterProvider) {
-    $urlRouterProvider.when('','/home');
+    $urlRouterProvider.when('','/orderDishes');
 
     $stateProvider
-    .state('home',{
-      url:'/home',
-      templateUrl:'views/home.html',
-      controller:'homeCtrl'
-    })
     .state('orderDishes',{
       url:'/orderDishes',
       templateUrl:'views/orderDishes.html',
@@ -36,16 +31,11 @@ eparty.config(function ($stateProvider,$urlRouterProvider) {
       templateUrl:'views/wxPay.html',
       controller:'wxPayCtrl'
     })
-    .state('evaluate',{
-      url:'/evaluate',
-      templateUrl:'views/evaluate.html',
-      controller:'evaluateCtrl'
-    })
     .state('orderDetails',{
       url:'/orderDetails/:orderId/:tableId/:tableCode/:orderType',
       templateUrl:'views/orderDetail.html',
       controller:'orderDetailsCtrl'
     })
     
-    $urlRouterProvider.otherwise('/home');
+    $urlRouterProvider.otherwise('/orderDishes');
   });
